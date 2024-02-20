@@ -78,6 +78,7 @@ header nav{
 
 main{
     padding-top: 78px;
+    padding-bottom: 22px;
 }
 
 .nav__item img{
@@ -212,6 +213,9 @@ main{
 footer{
     background-color: rgb(239, 233, 255);
     padding: 2px 24px;
+    position: fixed;
+    width: -webkit-fill-available;
+    bottom: 0;
 }
 
 .button-sabermas{
