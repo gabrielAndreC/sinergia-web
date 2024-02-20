@@ -8,14 +8,15 @@
 
 header{
     width: 100%;
-    height: 70px;
+    height: 78px;
     position:fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 4px 0;
+    padding: 0;
     background-color: rgb(239, 233, 255);
+    z-index: 10000;
 }
 
 header nav{
@@ -23,6 +24,7 @@ header nav{
     flex-direction: row;
     justify-content: center; 
     width: 100%;
+    padding: 4px 0;
 }
 
 .nav__list{
@@ -31,6 +33,8 @@ header nav{
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .nav__item{
@@ -46,6 +50,8 @@ header nav{
 
 .nav__item a{
     cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
 
 .nav__dropdown{
@@ -62,6 +68,7 @@ header nav{
     top: 24px;
     align-items: center;
     padding-top: 25px;
+    padding-left: 0;
     width: 150px;
     background-color: rgb(239, 233, 255);
 }
@@ -84,6 +91,7 @@ main{
 .nav__item img{
     list-style-type:none;
     height: 70px;
+    vertical-align: middle;
 }
 
 .main__hero img{
@@ -158,6 +166,12 @@ main{
     flex-direction: column;
     width: 100%;
     align-items: center;
+    background-color: rgb(239, 233, 255);
+}
+
+.main__runastarot{
+    background-color: rgb(239, 233, 255);
+    height: 100%;
 }
 
 .main__terapias .productosContainer{
@@ -166,29 +180,31 @@ main{
     align-items: center;
     justify-content: center;
     width: 80%;
-    background-color: rgb(239, 233, 255);
 }
 
 .productosTarjeta{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 450px;
     height: 400px;
     background-color: rgb(217, 209, 252);
-    margin: 32px 8px 32px 8px;
-    padding: 16px;
+    margin: 32px 8px 16px 8px;
     border-radius: 8px;
+    border: 1px solid lightgray;
+    padding-bottom: 16px;
 }
 .productosTarjeta img{
     width: 100%;
     height: 200px;
     border-radius: 8px;
-    margin-bottom: 16px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .productosTarjeta-Info{
     display: flex;
     flex-direction: column;
     align-items: start;
+    padding: 16px 16px;
 }
 .productosTarjeta-Info h1{
     font-size: 24px;
@@ -199,7 +215,6 @@ main{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     height: 84px;
-    width: 400px;
     font-size: 18;
     margin-bottom: 8px;
     overflow: hidden;
@@ -217,15 +232,19 @@ footer{
     width: -webkit-fill-available;
     bottom: 0;
 }
+footer p{
+    margin: 0;
+}
 
 .button-sabermas{
-    background-color: rgb(55, 0, 255);
+    background-color: rgb(100, 57, 255);
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
     width: fit-content;
+    text-decoration: none;
 }
 .button-sabermas:hover{
     background-color: rgb(213, 206, 255);
@@ -237,4 +256,29 @@ footer{
     width: 200px;
     height: 1px;
     border-bottom: 1px solid black;
+}
+
+/* BOOTSTRAP */
+.mb-3{
+    max-width: auto;
+    height: 300px;
+    margin: 0 8px;
+}
+.col-md-8{
+    background-color: rgb(154, 139, 189);
+}
+.col-md-4 img{
+    height: 300px;
+    width: auto;
+    overflow: hidden;
+}
+.card-runas{
+    color: white;
+}
+.card-title{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+}
+.card-text{
+    font-size: 16px;
 }
