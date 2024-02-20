@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+    font-family: "helvetica", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    position:fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+    background-color: rgb(239, 233, 255);
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    width: 100%;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav__item{
+    list-style-type:none;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: default;
+}
+.nav__item:hover{
+    text-decoration: underline solid rgb(175, 170, 190) 1px;
+}
+
+.nav__item a{
+    cursor: pointer;
+}
+
+.nav__dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.nav__dropdownContainer{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 24px;
+    align-items: center;
+    padding-top: 25px;
+    width: 150px;
+    background-color: rgb(239, 233, 255);
+}
+
+.nav__dropdown:hover .nav__dropdownContainer{
+    display: flex;
+}
+
+.nav__dropdownContainer .nav__item{
+    padding: 8px 0;
+    width: fit-content;
+    border-top: 1px solid rgb(170, 190, 190);
+}
+
+main{
+    padding-top: 78px;
+}
+
+.nav__item img{
+    list-style-type:none;
+    height: 70px;
+}
+
+.main__hero img{
+    width: 100%;
+    height: 500px;
+}
+
+.main__podcast{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0;
+}
+.main__podcastContainer{
+    width: fit-content;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__podcastContainer img{
+    width: 40px;
+    padding-right: 20px;
+}
+.main__podcastContainer h2{
+    font-size: 38px;
+}
+
+.main__quienes{
+    width: 100%;
+    height: 400px;
+    padding: 18px 0;
+    background-color: rgb(239, 233, 255);
+    margin-bottom: 48px;
+}
+
+.main__quienes h2{
+    font-size: 38;
+    background-color: white;
+    padding: 18px 24px;
+    margin-bottom: 18px;
+}
+
+.main__quienesContainer{
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main__quienesContainer img{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+}
+
+.main__quienesInfo{
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+}
+
+.main__quienesInfo p{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.main__terapias{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.main__terapias .productosContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: rgb(239, 233, 255);
+}
+
+.productosTarjeta{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(217, 209, 252);
+    margin: 32px 8px 32px 8px;
+    padding: 16px;
+    border-radius: 8px;
+}
+.productosTarjeta img{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.productosTarjeta-Info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.productosTarjeta-Info h1{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.productosTarjeta-Info p{
+    height: 88;
+    font-size: 18;
+    margin-bottom: 8px;
+}
+.productosTarjeta-Info .button-sabermas{
+    align-self:flex-end;
+}
+
+footer{
+    background-color: rgb(239, 233, 255);
+    padding: 2px 24px;
+}
+
+.button-sabermas{
+    background-color: rgb(55, 0, 255);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+}
+.button-sabermas:hover{
+    background-color: rgb(213, 206, 255);
+    box-shadow: inset 0 0 0 1px rgb(55, 0, 255);
+    color: black;
+}
+
+.graphics__line{
+    width: 200px;
+    height: 1px;
+    border-bottom: 1px solid black;
+}
