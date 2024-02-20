@@ -171,7 +171,7 @@ main{
 .productosTarjeta{
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 400px;
     height: 400px;
     background-color: rgb(217, 209, 252);
     margin: 32px 8px 32px 8px;
@@ -194,9 +194,16 @@ main{
     margin-bottom: 16px;
 }
 .productosTarjeta-Info p{
-    height: 88;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    height: 84px;
+    width: 400px;
     font-size: 18;
     margin-bottom: 8px;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
 }
 .productosTarjeta-Info .button-sabermas{
     align-self:flex-end;
