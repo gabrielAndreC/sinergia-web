@@ -434,12 +434,24 @@ footer p{
     background-color: rgb(154, 139, 189);
 }
 .col-md-4 img{
+    width: 100%;
     height: 300px;
-    width: auto;
+    object-fit: cover;
     overflow: hidden;
 }
 .card-runas{
     color: white;
+}
+.card-runasSize{
+    height: 300px;
+    overflow: hidden;
+}
+.card-runasSizeImg{
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card-title{
     font-family: 'Helvetica', sans-serif;
@@ -580,6 +592,16 @@ footer p{
         border-bottom-left-radius: 8px;
         border: 2px solid white;
         border-top: unset;
+    }
+
+    .card-runasSize{
+        height: 240px;
+    }
+    .card-runasSizeImg{
+        height: 240px;
+    }
+    .col-md-4 img{
+        height: 240px;
     }
 
     .titleBanner{
