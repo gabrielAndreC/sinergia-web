@@ -49,7 +49,7 @@ header nav{
     cursor: default;
 }
 .nav__listMobile__logo img{
-    height: 70px;
+    height: 55px;
 }
 
 
@@ -447,12 +447,32 @@ footer p{
 /* Mobile L: 375 */
 
 @media (max-width: 425px){
-
+    header{
+        height: 64px;
+    }
+    main{
+        padding-top: 64px;
+    }
     .nav__list{
         display: none;
     }
     .nav__listMobile{
         display: flex;
+    }
+    .inicio__podcast{
+        padding: 0 18px;
+        margin: 8px 0;
+    }
+    .inicio__podcastContainer{
+        height: 72px;
+    }
+    .inicio__podcastContainer img{
+        width: 48px;
+    }
+    .inicio__podcastContainer h2{
+        font-size: 31px;
+        width: max-content;
+        max-width: 232px;
     }
     .inicio__quienesContainer{
         flex-direction: column;
@@ -460,6 +480,24 @@ footer p{
     .inicio__quienesContainer img{
         width: 100%;
         height: unset;
+        margin-bottom: 12px;
     }
-
+    .inicio__quienesInfo{
+        padding: 0;
+    }
+    .inicio__quienesInfo p {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .titleBanner{
+        font-size: 32px;
+    }
+    footer{
+        padding: 2px 0;
+    }
+    footer p{
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
 }
