@@ -40,9 +40,8 @@ header nav{
     display: none;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    padding: 0 16px;
     margin: 0;
 }
 .nav__listMobile__logo{
@@ -201,8 +200,9 @@ main{
 
 .runastarot__wrapper{
     background-color: rgb(239, 233, 255);
-    height: 100%;
     padding-top: 16px;
+    padding-top: 16px;
+    padding-bottom: 24px;
 }
 
 .titleBanner{
@@ -358,17 +358,20 @@ main{
     padding-bottom: 28px;
 }
 .curso__img{
-    max-width: 1024px;
-    max-height: 450px;
+    height: 300px;
     width: 100%;
+    object-fit: cover;
 }
 .curso__info-s{
     margin: 24px 0;
+    text-align: center;
+    text-wrap: pretty;
 }
 .curso__info-m{
     align-self: baseline;
     padding: 0 24px;
     margin-bottom: 24px;
+    text-wrap: pretty;
 }
 .curso__span{
     align-self: baseline;
@@ -380,7 +383,8 @@ main{
 }
 .curso__precio{
     background-color: white;
-    padding: 12px 0 12px 24px;
+    padding: 11px 2;
+    padding-left: 24px;
     text-align: left;
     border-radius: 8px;
     box-shadow: inset 0 0 0 2px lightgray;
@@ -602,6 +606,19 @@ footer p{
     }
     .col-md-4 img{
         height: 240px;
+    }
+
+    .curso__img{
+        height: 240px;
+    }
+
+    .curso__info-m{
+        text-align: center;
+    }
+
+    .curso__span{
+        align-self: center;
+        padding: 0 24px;
     }
 
     .titleBanner{
