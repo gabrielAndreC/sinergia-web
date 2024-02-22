@@ -227,12 +227,11 @@ main{
     display: flex;
     flex-direction: column;
     width: 450px;
-    height: 400px;
     background-color: rgb(217, 209, 252);
     margin: 32px 8px 16px 8px;
     border-radius: 8px;
     border: 1px solid lightgray;
-    padding-bottom: 16px;
+    line-height: normal;
 }
 .productosTarjeta img{
     width: 100%;
@@ -494,6 +493,20 @@ footer p{
     .inicio__quienesInfo p {
         font-size: 18px;
         margin-bottom: 12px;
+    }
+
+    .terapias__wrapper .productosContainer{
+        width: 100%;
+    }
+    .productosTarjeta-Info{
+        padding-top: 8px;
+    }
+    .productosTarjeta-Info h1{
+        align-self: center;
+        margin-bottom: 8px;
+    }
+    .productosTarjeta-Info .button-sabermas{
+        align-self: center;
     }
 
     .quienes__tarjeta{
