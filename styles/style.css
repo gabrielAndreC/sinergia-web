@@ -226,7 +226,7 @@ main{
 .productosTarjeta{
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 390px;
     background-color: rgb(217, 209, 252);
     margin: 32px 8px 16px 8px;
     border-radius: 8px;
@@ -479,6 +479,9 @@ footer p{
         width: max-content;
         max-width: 232px;
     }
+    .inicio__quienes{
+        height: unset;
+    }
     .inicio__quienesContainer{
         flex-direction: column;
     }
@@ -553,6 +556,30 @@ footer p{
     }
     .flex-h:nth-of-type(3){
         margin-bottom: unset;
+    }
+
+    .contacto__wrapper{
+        flex-direction: column;
+    }
+    .contactoForm__container{
+        width: 100%;
+        padding: 16px;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 8px;
+        border: 2px solid white;
+        border-bottom: unset;
+    }
+    .contactoMaps__container{
+        width: 100%;
+        height: 240px;
+    }
+    .contactoMaps{
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 8px;
+        border: 2px solid white;
+        border-top: unset;
     }
 
     .titleBanner{
