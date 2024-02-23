@@ -653,3 +653,73 @@ footer p{
         text-align: center;
     }
 }
+
+/* Tablet: 768px */
+@media (min-width: 431px) and (max-width: 768px){
+    .inicio__quienes{
+        height: unset;
+    }
+    .inicio__quienesContainer{
+        flex-direction: column;
+    }
+    .inicio__quienesImg{
+        width: unset;
+        height: 240px;
+        margin-bottom: 12px;
+    }
+    .inicio__quienesImg img{
+        height: 240px;
+    }
+    .inicio__quienesInfo{
+        padding: 0;
+    }
+    .inicio__quienesInfo p {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .quienes__tarjeta{
+        padding: 16px 12px;
+        padding-bottom: unset;
+    }
+    .quienes__tarjeta h2{
+        padding-top: 24px;
+    }
+    .quienes__tarjeta p{
+        font-size: 18px;
+    }
+    .quienes__tarjeta img{
+        height: 160px;
+    }
+    .quienes__tarjeta .rounded-circle{
+        height: 160px;
+    }
+    .flex-h{
+        padding: unset;
+        padding-top: 12px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-h h2{
+        text-align: unset;
+        padding-top: 24px;
+    }
+    .flex-h p{
+        text-align: center;
+        padding: 0 12px;
+        width: 100%;
+    }
+    
+    .flex-h:nth-of-type(odd){
+        flex-direction: column;
+    }
+    .flex-h:nth-of-type(odd) h2{
+        text-align: unset;
+    }
+    .flex-h:nth-of-type(odd) p{
+        text-align: center;
+    }
+    .flex-h:nth-of-type(3){
+        margin-bottom: unset;
+    }
+}
