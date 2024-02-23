@@ -175,10 +175,17 @@ main{
     flex-direction: row;
 }
 
-.inicio__quienesContainer img{
-    background-color: white;
+.inicio__quienesImg{
     width: 500px;
     height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inicio__quienesImg img{
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .inicio__quienesInfo{
@@ -507,10 +514,13 @@ footer p{
     .inicio__quienesContainer{
         flex-direction: column;
     }
-    .inicio__quienesContainer img{
+    .inicio__quienesImg{
         width: 100%;
         height: unset;
         margin-bottom: 12px;
+    }
+    .inicio__quienesImg img{
+        height: unset;
     }
     .inicio__quienesInfo{
         padding: 0;
