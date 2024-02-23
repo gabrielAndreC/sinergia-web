@@ -655,7 +655,7 @@ footer p{
 }
 
 /* Tablet: 768px */
-@media (min-width: 431px) and (max-width: 768px){
+@media (min-width: 431px) and (max-width: 1023px){
     .inicio__quienes{
         height: unset;
     }
