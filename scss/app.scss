@@ -1,0 +1,15 @@
+//GENERAL
+@import './general/reset.scss';
+//LAYOUT
+@import './layout/header.scss';
+@import './layout/main.scss';
+@import './layout/footer.scss';
+//PAGES
+@import './pages/inicio.scss';
+@import './pages/terapias_runastarot.scss'; //son dos paginas
+@import './pages/contacto.scss';
+@import './pages/curso.scss';
+//ELEMENTS
+@import './elements/buttons.scss';
+@import './elements/titles.scss';
+@import './elements/cards.scss';

@@ -1,0 +1,20 @@
+.button-sabermas{
+    background-color: rgb(100, 57, 255);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+    text-decoration: none;
+}
+.button-sabermas:hover{
+    background-color: rgb(213, 206, 255);
+    box-shadow: inset 0 0 0 1px rgb(55, 0, 255);
+    color: black;
+}
+.mb-3{
+    max-width: auto;
+    height: 300px;
+    margin: 0 8px;
+}
