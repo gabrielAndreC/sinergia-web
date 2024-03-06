@@ -19,11 +19,11 @@
     border: 1px solid lightgray;
     line-height: normal;
     img{
-        width: 100%;
         height: 200px;
         border-radius: 8px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        object-fit: cover;
     }
     .productosTarjeta-Info{
         display: flex;
