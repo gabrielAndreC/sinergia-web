@@ -1,3 +1,4 @@
+@import "./colors.scss";
 @mixin mq-mobile-L{
     @media (max-width:430px){
         @content;
@@ -13,13 +14,14 @@
     display: flex;
     flex-direction: column;
     width: 390px;
-    background-color: rgb(217, 209, 252);
+    background-color: $colCardBg;
     margin: 32px 8px 16px 8px;
     border-radius: 8px;
-    border: 1px solid lightgray;
+    border: 1px solid $colContrastL;
     line-height: normal;
     img{
         height: 200px;
+        width: 100%;
         border-radius: 8px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -39,6 +41,7 @@
             @include mq-mobile-L(){
                 align-self: center;
                 margin-bottom: 8px;
+                text-align: center;
             }
         }
         p{
@@ -199,11 +202,10 @@
 }
 
 .col-md-8{
-    background-color: rgb(154, 139, 189);
+    background-color: $colCardBg;
 }
 .col-md-4 img{
     width: 100%;
-    height: 300px;
     object-fit: cover;
     overflow: hidden;
     @include mq-mobile-L(){
@@ -211,7 +213,7 @@
     }
 }
 .card-runas{
-    color: white;
+    color: $colForeground;
     @include mq-mobile-L(){
         font-size: 18px;
     }
@@ -224,11 +226,14 @@
     }
 }
 .card-runasSizeImg{
-    height: 300px;
+
     overflow: hidden;
     display: flex;
-    align-items: center;
+
     justify-content: center;
+    img{
+        object-fit: cover;
+    }
     @include mq-mobile-L(){
         height: 240px;
     }

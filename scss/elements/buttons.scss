@@ -1,5 +1,6 @@
+@import "./colors.scss";
 .button-sabermas{
-    background-color: rgb(100, 57, 255);
+    background-color: $colContrast;
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -9,9 +10,9 @@
     text-decoration: none;
 }
 .button-sabermas:hover{
-    background-color: rgb(213, 206, 255);
-    box-shadow: inset 0 0 0 1px rgb(55, 0, 255);
-    color: black;
+    background-color: $colBg;
+    box-shadow: inset 0 0 0 1px $colContrast;
+    color: $colForeground;
 }
 .mb-3{
     max-width: auto;
