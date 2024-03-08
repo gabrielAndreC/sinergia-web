@@ -579,47 +579,200 @@ footer p {
   }
 }
 
+@keyframes rotacion_inf {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
+@keyframes cartaIn {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    z-index: 900;
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes cartaOut {
+  0% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    z-index: 1000;
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes zindexIn {
+  0% {
+    z-index: 1000;
+  }
+  50% {
+    z-index: 1000;
+  }
+  60% {
+    z-index: 800;
+  }
+  100% {
+    z-index: 800;
+  }
+}
+@keyframes zindexOut {
+  0% {
+    z-index: 800;
+  }
+  50% {
+    z-index: 800;
+  }
+  60% {
+    z-index: 1000;
+  }
+  100% {
+    z-index: 1000;
+  }
+}
+.proximamente__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 78px - 24px);
+}
+.proximamente__wrapper img {
+  animation-name: rotacion_inf;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+@media (max-width: 430px) {
+  .proximamente__wrapper img {
+    width: 70%;
+  }
+}
+@media (min-width: 431px) and (max-width: 1023px) {
+  .proximamente__wrapper img {
+    width: 80%;
+  }
+}
+
+.tarjetaHover:hover .productosTarjeta {
+  animation-name: cartaIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+.tarjetaHover:hover .tarjetaFront {
+  animation-name: zindexIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+.tarjetaHover .productosTarjeta {
+  animation-name: cartaOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+.tarjetaHover .tarjetaFront {
+  animation-name: zindexOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+
 .productosTarjeta {
   display: flex;
-  flex-direction: column;
-  width: 390px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 390px;
+  height: 100%;
+  max-height: 444px;
   background-color: #dfd3ff;
   margin: 32px 8px 16px 8px;
   border-radius: 8px;
   border: 1px solid #4d4861;
   line-height: normal;
 }
-.productosTarjeta img {
-  height: 200px;
+.productosTarjeta .tarjetaFront {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #dfd3ff;
+  z-index: 1000;
+  border-radius: 8px;
+  max-height: 442px;
+}
+.productosTarjeta .tarjetaFront img {
+  height: 240px;
   width: 100%;
   border-radius: 8px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   object-fit: cover;
 }
-.productosTarjeta .productosTarjeta-Info {
+.productosTarjeta .tarjetaFront .button-sabermas {
+  display: none;
+  align-self: flex-end;
+  margin-right: 0;
+  margin-bottom: 16px;
+}
+@media (max-width: 430px) {
+  .productosTarjeta .tarjetaFront .button-sabermas {
+    display: unset;
+    align-self: center;
+  }
+}
+.productosTarjeta .tarjetaFront .productosTarjeta-Info {
   display: flex;
   flex-direction: column;
   align-items: start;
   padding: 16px 16px;
+  padding-bottom: 8px;
 }
 @media (max-width: 430px) {
-  .productosTarjeta .productosTarjeta-Info {
+  .productosTarjeta .tarjetaFront .productosTarjeta-Info {
     padding-top: 8px;
   }
 }
-.productosTarjeta .productosTarjeta-Info h1 {
+.productosTarjeta .tarjetaFront .productosTarjeta-Info h1 {
   font-size: 24px;
   margin-bottom: 16px;
 }
 @media (max-width: 430px) {
-  .productosTarjeta .productosTarjeta-Info h1 {
+  .productosTarjeta .tarjetaFront .productosTarjeta-Info h1 {
     align-self: center;
     margin-bottom: 8px;
     text-align: center;
   }
 }
-.productosTarjeta .productosTarjeta-Info p {
+.productosTarjeta .tarjetaFront .productosTarjeta-Info p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
@@ -630,13 +783,65 @@ footer p {
   white-space: wrap;
   text-overflow: ellipsis;
 }
-.productosTarjeta .productosTarjeta-Info .button-sabermas {
+.productosTarjeta .tarjetaBack {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: #dfd3ff;
+  z-index: 900;
+  rotate: y 180deg;
+  max-width: 388px;
+  max-height: 442px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: 950;
+}
+.productosTarjeta .tarjetaBack .button-sabermas {
   align-self: flex-end;
+  margin-right: 16px;
 }
 @media (max-width: 430px) {
-  .productosTarjeta .productosTarjeta-Info .button-sabermas {
+  .productosTarjeta .tarjetaBack .button-sabermas {
     align-self: center;
+    margin: 0;
+    margin-bottom: 16px;
   }
+}
+.productosTarjeta .tarjetaBack .productosTarjeta-Info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 16px 16px;
+  padding-bottom: 8px;
+}
+@media (max-width: 430px) {
+  .productosTarjeta .tarjetaBack .productosTarjeta-Info {
+    padding-top: 8px;
+  }
+}
+.productosTarjeta .tarjetaBack .productosTarjeta-Info h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+@media (max-width: 430px) {
+  .productosTarjeta .tarjetaBack .productosTarjeta-Info h1 {
+    align-self: center;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+.productosTarjeta .tarjetaBack .productosTarjeta-Info p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 19;
+  font-size: 16;
+  margin: 0;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
 }
 
 .quienes__tarjeta {
@@ -847,6 +1052,7 @@ footer p {
 .card-runasSize {
   height: 300px;
   overflow: hidden;
+  border: 2px solid #4d4861 !important;
 }
 @media (max-width: 430px) {
   .card-runasSize {
