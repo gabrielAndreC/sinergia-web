@@ -101,13 +101,12 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     max-width: 390px;
-    height: 100%;
-    max-height: 444px;
     background-color: $colCardBg;
     margin: 32px 8px 16px 8px;
     border-radius: 8px;
     border: 1px solid $colContrastL;
     line-height: normal;
+    height: 482px;
     .tarjetaFront{
         display: flex;
         flex-direction: row;
@@ -116,7 +115,7 @@
         background-color: $colCardBg;
         z-index: 1000;
         border-radius: 8px;
-        max-height: 442px;
+        height: 480px;
         img{
             height: 240px;
             width: 100%;
@@ -177,9 +176,8 @@
         z-index: 900;
         rotate: y 180deg;
         max-width: 388px;
-        max-height: 442px;
         width: 100%;
-        height: 100%;
+        height: 480px;
         border-radius: 8px;
         z-index: 950;
         .button-sabermas{
@@ -213,7 +211,8 @@
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 19;
-                font-size: 16;
+                font-size: 14;
+                font-weight: 500;
                 margin: 0;
                 overflow: hidden;
                 white-space: wrap;

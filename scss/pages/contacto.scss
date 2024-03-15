@@ -7,6 +7,7 @@
 
 .contacto__wrapper{
     padding: 16px;
+    height: 600px;
     background-color: $colBg;
     display: flex;
     @include mq-mobile-L(){
@@ -32,26 +33,55 @@
             color: $colForeground;
         }
     }
-}
-
-.contactoMaps__container{
-    width: 50%;
-    @include mq-mobile-L(){
-        width: 100%;
-        height: 240px;
-    }
-    .contactoMaps{
-        width: 100%;
-        height: 100%;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-        border: 2px solid $colContrastL;
-        border-left: unset;
+    .contactoInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        background-color: $colCardBg;
+        padding: 16px 32px;
+        h2{
+            text-align: center;
+            margin: 16px 0 32px 0;
+        }
+        a{
+            width: 80%;
+            text-align: center;
+            &:nth-of-type(1){
+                background-color: #f54e5c;
+                color: white;
+                margin-bottom: 32px;
+            }
+            &:nth-of-type(2){
+                color: white;
+                margin-bottom: 32px;
+                background-color: $colContrastL;
+            }
+            &:hover{
+                box-shadow: inset 0 0 0 2px white;
+            }
+        }
         @include mq-mobile-L(){
-            border-top-right-radius: unset;
-            border-bottom-left-radius: 8px;
+            width: 100%;
+            height: 240px;
+        }
+    }
+    .contactoMaps__container{
+        width: 60%;
+        @include mq-mobile-L(){
+            width: 100%;
+            height: 240px;
+        }
+        .contactoMaps{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
             border: 2px solid $colContrastL;
-            border-top: unset;
+            @include mq-mobile-L(){
+                border: 2px solid $colContrastL;
+            }
         }
     }
 }
+
