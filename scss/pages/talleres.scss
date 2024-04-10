@@ -1,0 +1,7 @@
+@import '../elements/colors.scss';
+.talleres__wrapper{
+    background-color: $colBg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

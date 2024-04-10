@@ -1,0 +1,14 @@
+@import './colors.scss';
+@for $i from 1 through 8{
+    .hr#{$i} {
+        width: 150px*$i;
+        margin: 0;
+        border-color: $colForeground;
+    }
+}
+.hrAuto{
+    width: 100%;
+    margin: 0;
+    border-color: $colForeground;
+    border-top: 2px solid $colForeground;
+}

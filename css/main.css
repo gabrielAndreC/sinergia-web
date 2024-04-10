@@ -576,6 +576,13 @@ footer p {
   margin-left: 20px;
 }
 
+.talleres__wrapper {
+  background-color: #efe9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button-sabermas {
   background-color: #6d42b8;
   color: white;
@@ -1115,6 +1122,107 @@ footer p {
 
 .card-text {
   font-size: 16px;
+}
+
+.tallerTarjeta {
+  background-color: #efe9ff;
+}
+.tallerTarjeta:nth-of-type(even) {
+  background-color: white;
+}
+.tallerTarjeta:first-of-type {
+  margin-top: 32px;
+}
+.tallerTarjeta:last-of-type {
+  margin-bottom: 32px;
+}
+.tallerTarjeta .info {
+  padding: 8px;
+  padding-bottom: unset;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  max-width: 800px;
+}
+.tallerTarjeta .info h1 {
+  font-size: 20px;
+  font-weight: 600 !important;
+}
+.tallerTarjeta .info p {
+  min-height: 50px;
+  height: 100%;
+}
+.tallerTarjeta .info ul {
+  margin-bottom: 12px;
+}
+.tallerTarjeta .info ul li {
+  font-weight: 600;
+  font-size: 14px;
+}
+.tallerTarjeta .info ul li:last-of-type {
+  margin-top: 12px;
+}
+.tallerTarjeta .info span {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.tallerTarjeta .info a {
+  margin-bottom: 12px;
+}
+
+.hr1 {
+  width: 150px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr2 {
+  width: 300px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr3 {
+  width: 450px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr4 {
+  width: 600px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr5 {
+  width: 750px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr6 {
+  width: 900px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr7 {
+  width: 1050px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hr8 {
+  width: 1200px;
+  margin: 0;
+  border-color: #1c1c2a;
+}
+
+.hrAuto {
+  width: 100%;
+  margin: 0;
+  border-color: #1c1c2a;
+  border-top: 2px solid #1c1c2a;
 }
 
 /*# sourceMappingURL=main.css.map */
