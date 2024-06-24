@@ -1,20 +1,79 @@
 @import "../elements/colors.scss";
-@mixin mq-mobile-L{
-    @media (max-width:430px){
+
+@mixin mq-mobile-L {
+    @media (max-width:430px) {
         @content;
     }
 }
-@mixin mq-mobile-XL{
-    @media (min-width: 431px) and (max-width: 1023px){
-    @content;
+
+@mixin mq-mobile-XL {
+    @media (min-width: 431px) and (max-width: 1023px) {
+        @content;
     }
 }
 
-.inicio__wrapper{
+.inicio__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .hero__wrapper{
+    .heroNovedad__wrapper{
+        display: flex;
+        flex-direction: column;
+        max-height: 650px;
+        margin-bottom: 50px;
+        .heroimg{
+            z-index: 900;
+            height: 20vw;
+            @include mq-mobile-L(){
+                height: 25vw;
+            }
+            img{width: 100%;}
+        }
+        .heroNovedad__info{
+            z-index: 1000;
+            width: 100%;
+            height: fit-content;
+            position: relative;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            h1{
+                width: fit-content;
+                align-self: center;
+            }
+            span{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            a{
+                align-self: center;
+                margin: 10px 10px;
+            }
+            li{
+                width: 100%;
+                align-self: center;
+                list-style: none;
+                ul{
+                    align-self: center;
+                    text-align: center;
+                    padding: 0;
+                    width: 100%;
+                    &:first-of-type{
+                        text-align: center;
+                        list-style: none;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .hero__wrapper {
         display: flex;
         justify-content: center;
         background-image: url("../resources/img_inicioHero.png");
@@ -22,19 +81,23 @@
         background-position-x: center;
         background-position-y: top;
         width: 100%;
-        max-width: 1200px;
-        @include mq-mobile-L(){
+        // max-width: 1200px;
+
+        @include mq-mobile-L() {
             background-size: 200%;
         }
-        .hero__info{
+
+        .hero__info {
             display: flex;
-            max-width: 1200px;
+            // max-width: 1200px;
             width: 100%;
             height: 500px;
-            @include mq-mobile-L(){
+
+            @include mq-mobile-L() {
                 height: 300px;
             }
-            p{
+
+            p {
                 align-self: flex-end;
                 margin: 0;
                 padding: 16px 32px 32px 32px;
@@ -44,23 +107,26 @@
                 background-color: rgba(0, 0, 0, 0.5019607843);
                 height: fit-content;
                 width: 100%;
-                @include mq-mobile-L(){
+
+                @include mq-mobile-L() {
                     padding: 0 16px 16px 16px;
                     font-size: 18px;
                 }
-                span{
+
+                span {
                     color: white;
                 }
-                .hero__deskText{
-                    @include mq-mobile-L(){
-                    display: none;
+
+                .hero__deskText {
+                    @include mq-mobile-L() {
+                        display: none;
                     }
                 }
             }
         }
     }
 
-    .inicio__podcast{
+    .inicio__podcast {
         width: 100%;
         max-width: 1200px;
         display: flex;
@@ -68,30 +134,37 @@
         align-items: center;
         justify-content: center;
         margin: 18px 0;
-        @include mq-mobile-L(){
+
+        @include mq-mobile-L() {
             padding: 0 18px;
             margin: 8px 0;
         }
-        .inicio__podcastContainer{
+
+        .inicio__podcastContainer {
             width: fit-content;
             height: 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            @include mq-mobile-L(){
+
+            @include mq-mobile-L() {
                 height: 72px;
             }
-            img{
+
+            img {
                 width: 60px;
                 padding-right: 20px;
-                @include mq-mobile-L(){
+
+                @include mq-mobile-L() {
                     width: 48px;
                 }
             }
-            h2{
+
+            h2 {
                 font-size: 38px;
                 margin: 0;
-                @include mq-mobile-L(){
+
+                @include mq-mobile-L() {
                     font-size: 31px;
                     width: max-content;
                     max-width: 232px;
@@ -100,89 +173,108 @@
         }
     }
 
-    .inicio__quienes{
-        max-width: 1200px;
+    .inicio__quienes {
+        // max-width: 1200px;
         width: 100%;
         height: 100%;
         padding: 18px 0;
         background-color: $colBg;
-        @include mq-mobile-L(){
+
+        @include mq-mobile-L() {
             height: unset;
         }
-        @include mq-mobile-XL(){
+
+        @include mq-mobile-XL() {
             height: unset;
         }
-        h2{
+
+        h2 {
             font-size: 38;
             background-color: white;
             padding: 18px 24px;
             margin-bottom: 18px;
         }
-        .inicio__quienesContainer{
+
+        .inicio__quienesContainer {
             padding: 18px 24px;
             display: flex;
             flex-direction: row;
-            @include mq-mobile-L(){
+
+            @include mq-mobile-L() {
                 flex-direction: column;
             }
-            @include mq-mobile-XL(){
+
+            @include mq-mobile-XL() {
                 flex-direction: column;
             }
-            .inicio__quienesImg{
+
+            .inicio__quienesImg {
                 width: 500px;
                 height: 300px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include mq-mobile-L(){
+
+                @include mq-mobile-L() {
                     width: 100%;
                     height: unset;
                     margin-bottom: 12px;
                 }
-                @include mq-mobile-XL(){
+
+                @include mq-mobile-XL() {
                     width: unset;
                     height: 240px;
                     margin-bottom: 12px;
                 }
-                img{
+
+                img {
                     height: 300px;
                     object-fit: cover;
                     overflow: hidden;
-                    @include mq-mobile-L(){
+
+                    @include mq-mobile-L() {
                         height: unset;
                     }
-                    @include mq-mobile-XL(){
+
+                    @include mq-mobile-XL() {
                         height: 240px;
                     }
                 }
             }
-        } 
-        .inicio__quienesInfo{
+        }
+
+        .inicio__quienesInfo {
             display: flex;
             flex-direction: column;
             padding-left: 24px;
-            @include mq-mobile-L(){
+
+            @include mq-mobile-L() {
                 padding: 0;
             }
-            @include mq-mobile-XL(){
+
+            @include mq-mobile-XL() {
                 padding: 0;
             }
-            p{
-                
+
+            p {
+
                 font-size: 20px;
                 margin-bottom: 24px;
-                @include mq-mobile-L(){
+
+                @include mq-mobile-L() {
                     font-size: 18px;
                     margin-bottom: 12px;
                 }
-                @include mq-mobile-XL(){
+
+                @include mq-mobile-XL() {
                     font-size: 18px;
                     margin-bottom: 12px;
                 }
             }
         }
     }
-    .graphics__line{
+
+    .graphics__line {
         width: 200px;
         height: 1px;
         border-bottom: 1px solid $colContrastL;
