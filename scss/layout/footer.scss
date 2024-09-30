@@ -7,13 +7,13 @@ footer{
     position: fixed;
     width: -webkit-fill-available;
     bottom: 0;
-    @media (max-width:430px){
+    @media (max-width:500px){
         padding: 2px 0;
     }
 }
 footer p{
     margin: 0;
-    @media (max-width:430px){
+    @media (max-width:500px){
         width: 100%;
         font-size: 14px;
         text-align: center;

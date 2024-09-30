@@ -1,11 +1,11 @@
 @import "./colors.scss";
 @mixin mq-mobile-L{
-    @media (max-width:430px){
+    @media (max-width:500px){
         @content;
     }
 }
 @mixin mq-mobile-XL{
-    @media (min-width: 431px) and (max-width: 1023px){
+    @media (min-width: 501px) and (max-width: 1023px){
     @content;
     }
 }

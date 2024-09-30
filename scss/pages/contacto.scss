@@ -1,6 +1,6 @@
 @import "../elements/colors.scss";
 @mixin mq-mobile-L{
-    @media (max-width:430px){
+    @media (max-width:500px){
         @content;
     }
 }

@@ -1,7 +1,53 @@
 @import "../elements/colors.scss";
 @mixin mq-mobile-L{
-    @media (max-width: 430px){
+    @media (max-width: 500px){
         @content;
+    }
+}
+.headerIndex{
+    background-color: #ecffe9;
+    nav{
+        .nav__listMobile{
+            button.btn.btn-secondary.dropdown-toggle{
+                background: #869f1b !important;
+            }
+            button.btn.btn-secondary.dropdown-toggle.show {
+                background: #394119 !important;
+            }
+            button.btn.dropdown-toggle.mob-button{
+                border: 2px solid #869f1b;
+            }
+            .dropdown-item{
+                &.active,
+                &:active {
+                    background-color: #ecffe9;
+                    color: #394119;
+                }
+            }
+        }
+        .nav__listMobile__logo{
+            cursor: default;
+            img{
+                height: 55px;
+            }
+            .btn-secondary{
+                background-color: rgb(154, 139, 189);
+            }
+        }
+        .nav__item{
+            &:hover{
+                text-decoration: underline solid #394119 1px;
+            }
+            a{
+                color: $colForeground;
+            }
+        }
+        .nav__dropdownContainer{
+            background-color: #ecffe9;
+            .nav__item{
+                border-top: 1px solid #394119;
+            }
+        }
     }
 }
 header{
